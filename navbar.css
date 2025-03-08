@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #93B1B5;
+    justify-content: space-between;
+    height: 72px;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+
+/* Hamburger Button */
+.hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: none;
+    border-radius: 6px;
+    color: black;
+
+}
+
+
+.hamburger-btn:hover {
+    color: #4F7C82;
+    transform: scale(1.1);
+}
+
+/* Search Form - Centered */
+.search-form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+
+.search-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgb(230, 230, 230);
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search-icon-img {
+    height: 20px;
+}
+
+/* Nav Links - Right Aligned */
+.nav {
+    display: flex;
+    gap: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+    margin-right: 52px;
+}
+
+
+
+.nav li {
+    cursor: pointer;
+    padding: 10px 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.nav li:hover {
+    background: #4F7C82;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid #4F7C82;
+}
+
+.nav li a {
+    color: inherit; /* Or specify a color like color: white; */
+    text-decoration: none;
+
+}
+/* Hidden Menu */
+.hidden-menu {
+    position: absolute; /* Change to absolute */
+    left: -250px;
+    top: 72px; /* Set top to the navbar's height */
+    width: 250px;
+    height: auto; /*change height to auto, to allow it to grow with content*/
+    background-color: #0B2E33;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+}
+
+.hidden-menu.active {
+    left: 0;
+}
+
+.menu-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    background-color: #cddadb;
+    width: 100%;
+}
+
+.menu-logo img {
+    width: 200px;
+    height: auto;
+    margin-right: 12px;
+    margin-top: 12px;
+}
+
+.hidden-menu ul {
+    list-style: none;
+    padding: 0;
+    background-color: #0B2E33;
+}
+
+.hidden-menu ul li {
+    padding: 15px 20px;
+    background-color: #0B2E33;
+}
+
+.hidden-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.hidden-menu ul li:hover {
+    background-color: #1a4248; /* Added Hover to hidden menu items*/
+    cursor: pointer;
+}
+/* Dark Mode Overrides */
+body.dark-mode nav {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode .nav li:hover {
+    background: #333;
+    border: 2px solid #333;
+}
+
+body.dark-mode .search-input {
+    background-color: #444;
+    color: #e0e0e0;
+    border: 2px solid #666;
+}
+
+body.dark-mode .search-input:focus {
+    background-color: #555;
+}
+
+body.dark-mode .hidden-menu {
+    background-color: #1a1a1a;
+    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .hidden-menu ul {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .hidden-menu ul li {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .hidden-menu ul li:hover {
+    background-color: #333;
+}
+
+body.dark-mode .menu-logo {
+    background-color: white;
+    border-bottom: 2px solid #555;
+}
+
+#darkModeToggle {
+    position: fixed;
+    color: #000000;
+    right: 8px;
+    padding: 8px 12px;
+    background-color: #eee;
+    border: 3px solid #0a0a0a;
+    border-radius: 20px;
+    cursor: pointer;
+    width: auto;
+    white-space: nowrap;
+}
+
+#darkModeToggle:hover {
+    background-color: rgb(122, 118, 118);
+}
+
+body.dark-mode .search-input {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+body.dark-mode .search-input:focus {
+    background-color: #f0f0f0;
+}
+
+body.dark-mode button {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+body.dark-mode h1 {
+    color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav li {
+        width: 90%;
+        padding: 12px;
+    }
+
+    .search-form {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 5px 10px;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .search-input {
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 30px;
+        width: 150px;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .search-input:focus {
+        width: 200px;
+        background-color: #f0f4f8;
+    }
+
+    .search-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        transition: background 0.3s ease-in-out, transform 0.2s ease;
+    }
+
+    .search-icon-img {
+        height: 24px;
+        transition: transform 0
+        .3s ease-in-out;
+    }
+
+    .search-btn:hover {
+        background: rgba(79, 124, 130, 0.2);
+        transform: scale(1.1);
+    }
+
+    .search-btn:hover .search-icon-img {
+        transform: rotate(15deg) scale(1.2);
+    }
+
+    .search-form:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    body.dark-mode .search-form {
+        background: #333;
+    }
+}

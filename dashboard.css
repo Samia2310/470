@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f4f8; /* Changed to match hidden-menu background */
+    font-family: Arial, sans-serif;
+}
+
+
+.dashboard-container {
+    max-width: 1200px;
+    padding: 50px;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.dashboard-container h1 {
+    font-size: 45px; /* More specific selector */
+}
+
+.dashboard-tagline {
+    font-size: 37px;
+    font-family: 'Parisienne', cursive;
+    color: black;
+    text-align: left;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        margin: 100px 10px 20px; /* Adjust for mobile view */
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+

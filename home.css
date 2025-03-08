@@ -1,0 +1,424 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #0B2E33;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons button {
+    background-color: #fff;
+    color: #0B2E33;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.hero-image {
+    margin-top: 50px;
+}
+
+/* How It Works Styles */
+.how-it-works {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    margin-bottom: 40px; /* Adjust value as needed */
+}
+
+.steps {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between steps */
+    justify-items: center; /* Center items horizontally */
+}
+
+.step {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 250px; /* Adjust width as needed */
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.step i {
+    font-size: 40px;
+    color: #00c853;
+    margin-bottom: 10px;
+}
+
+
+/* Task Categories Styles */
+.task-categories {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.task-categories h2 {
+    margin-bottom: 40px; /* Adjust value as needed */
+    text-align: center;
+}
+
+.categories {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between categories */
+}
+
+.category {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.category i {
+    font-size: 40px;
+    color: #00c853;
+    margin-bottom: 10px;
+}
+
+.explore-all {
+    display: block;
+    margin: 30px auto 0;
+    background-color: #00c853;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Featured Tasks Styles */
+.featured-tasks {
+    padding: 80px 0;
+}
+
+.featured-tasks h2{
+    text-align: center;
+    margin-bottom: 40px; 
+}
+
+.tasks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.task {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task h3 {
+    margin-top: 0;
+}
+
+.quick-apply {
+    background-color: #00c853;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-all {
+    display: block;
+    margin: 30px auto 0;
+    background-color: #00c853;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Testimonials Styles */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials h2{
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.testimonials-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial {
+    max-width: 400px;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.author {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* Final CTA Styles */
+.final-cta {
+    background-color: #00c853;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column h3 {
+    margin-top: 0;
+}
+
+.footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-links a {
+    font-size: 20px;
+}
+
+/* Dark Mode Styles */
+
+
+
+body.dark-mode {
+    background-color: #333;
+    color: black;
+}
+
+body.dark-mode header {
+    background-color: #222;
+    border-bottom-color: #555;
+}
+
+body.dark-mode header h1 {
+    color: black;
+}
+
+body.dark-mode nav a {
+    color: #fff;
+}
+
+body.dark-mode .hero {
+    background-color: lightgrey;
+    color : black 
+}
+
+body.dark-mode .cta-buttons button {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .how-it-works {
+    color: #fff;
+}
+
+body.dark-mode .step {
+    background-color: #333;
+    border-color: #555;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .task-categories {
+    background-color: #222;
+}
+
+body.dark-mode .featured-tasks {
+    color: #fff;
+}
+
+body.dark-mode .task {
+    background-color: #222;
+    border-color: #555;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .quick-apply {
+    background-color: lightgrey;
+    color: rgb(68, 66, 66);
+    font-weight: bold;
+}
+
+body.dark-mode .testimonials {
+    background-color: #222;
+}
+
+body.dark-mode .testimonial {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .final-cta {
+    background-color: lightgray;
+    color : black
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+body.dark-mode .footer-column a {
+    color: #fff;
+}
+
+body.dark-mode .task-categories {
+    background-color: #1a1a1a; /* Darker background for better contrast */
+    padding: 80px 0;
+}
+
+body.dark-mode .task-categories h2 {
+    color: #fff; /* White text for the title */
+}
+
+body.dark-mode .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+body.dark-mode .category {
+    background-color: #333; /* Darker card background */
+    border: 1px solid #444; /* Slightly lighter border for subtle separation */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-mode .category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .category i {
+    color: #00c853; /* Keep the green icons */
+}
+
+body.dark-mode .category h3 {
+    color: #fff; /* White text for category titles */
+}
+
+body.dark-mode .explore-all {
+    background-color: rgb(76, 73, 73); /* Green button */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px auto 0;
+    display: block;
+}
+
+body.dark-mode .explore-all:hover {
+    background-color: rgb(92, 89, 89); /* Darker green on hover */
+}

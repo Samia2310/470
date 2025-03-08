@@ -1,0 +1,193 @@
+/* myProfile.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e0f2f7, #f0f8ff);
+}
+
+.profile-container {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 600px;
+    max-width: 90%;
+    margin: 50px auto;
+    text-align: center; /* Center align all content within the container */
+}
+
+.profile-container h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#displayUserType {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-decoration: underline;
+}
+
+#displayProfileDetails {
+    white-space: pre-wrap;
+    line-height: 1.6;
+    color: #555;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: left; /* Align text within the details to the left */
+    display: inline-block; /* Allows the element to be centered */
+}
+
+#displayProfileDetails strong {
+    font-weight: 600;
+    color: #333;
+}
+
+#displayPassportPicture {
+    margin-top: 20px;
+    display: block; /* Ensure it's a block-level element */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+#deleteProfileButton {
+    background: #d9534f; /* Red color for delete */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#deleteProfileButton:hover {
+    background-color: #c82333; /* Slightly darker red on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25); /* Slightly larger shadow on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+#confirmationDialog {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#confirmationDialog button {
+    margin: 10px;
+}
+
+#displayProfileDetails:empty::before {
+    content: "No profile found. Please create a profile first.";
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+/* Styling for Yes/No buttons in confirmation dialog */
+#confirmationDialog button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Yes button (confirmDeleteYes) */
+#confirmDeleteYes {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#confirmDeleteYes:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+}
+
+/* No button (confirmDeleteNo) */
+#confirmDeleteNo {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+#confirmDeleteNo:hover {
+    background-color: #da190b; /* Darker red on hover */
+}
+
+/* Dark mode styles for Yes/No buttons */
+body.dark-mode #confirmDeleteYes {
+    background-color: #403f3f; /* Darker green for dark mode */
+}
+
+body.dark-mode #confirmDeleteYes:hover {
+    background-color: #403f3f; /* Even darker green on hover for dark mode */
+}
+
+body.dark-mode #confirmDeleteNo {
+    background-color: #403f3f; /* Darker red for dark mode */
+}
+
+body.dark-mode #confirmDeleteNo:hover {
+    background-color: #403f3f; /* Even darker red on hover for dark mode */
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: rgb(67, 65, 65); /* Body background is black */
+    color: white; /* Default text color in dark mode is white */
+}
+
+body.dark-mode .profile-container {
+    background: lightgrey; 
+}
+
+body.dark-mode .profile-container h1 {
+    color: black; /* Heading color in profile container is black */
+}
+
+body.dark-mode #displayProfileDetails {
+    color: black; /* Profile details text color is black */
+}
+
+body.dark-mode #displayUserType {
+    color: black;
+}
+
+
+body.dark-mode #deleteProfileButton,
+body.dark-mode #confirmDeleteYes,
+body.dark-mode #confirmDeleteNo {
+    background-color: #333; /* Darker background for buttons in dark mode */
+    color: white;
+}
+
+body.dark-mode #deleteProfileButton:hover {
+    background-color: #403f3f; /* Slightly darker shade for dark mode */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Adjusted shadow for dark mode */
+    transform: translateY(-2px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode #confirmationDialog {
+    background-color: #444; /* Darker background for confirmation dialog */
+    color: white;
+}
+
+
+
+

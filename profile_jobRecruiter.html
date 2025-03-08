@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recruiter Profile</title>
+    <link rel="stylesheet" href="profile_jobRecruiter.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <nav>
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <span class="hamburger-icon">☰</span>
+        </button>
+        <h1><b>Next Youth</b></h1>
+        <div class="search-form">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">
+                <img src="search-icon.png" alt="Search" class="search-icon-img">
+            </button>
+        </div>
+        <ul class="nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="notification.html">Notification</a></li>
+            <li><a href="AboutUs.html">?</a></li>
+            <li><button id="darkModeToggle"><b>Dark Mode</b></button></li>
+        </ul>
+    </nav>
+    <div class="hidden-menu" id="hiddenMenu">
+        <div class="menu-logo">
+            <img src="logo.svg" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="myProfile.html">My profile</a></li>
+            <li><a href="#" id="profileLink">Create my profile</a>
+                <ul id="profileSubmenu" style="display: none;">
+                    <li><a href="profile_jobApplicant.html">Job Applicant</a></li>
+                    <li><a href="profile_jobRecruiter.html">Job Recruiter</a></li>
+                </ul>
+            </li>
+            <li><a href="post-task.html">Post a Task</a></li>
+            <li><a href="my-tasks.html">My Tasks</a></li>
+            <li><a href="bidding-requests.html">Bidding Requests</a></li>
+            <li><a href="my-bids.html">My Bids</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="admin.html">Admin Panel</a></li>
+        </ul>
+    </div>
+    <div class="hidden-menu" id="hiddenMenu">
+        </div>
+    <div class="profile-container">
+        <h1>Job Recruiter Profile</h1>
+        <form id="profileForm">
+
+            <div class="form-group">
+                <label for="recruiterName">Full Name:</label>
+                <input type="text" id="recruiterName" name="Recruiter Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="Email Address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="Phone Number">
+            </div>
+            <div class="form-group">
+                <label for="Occupation">Occupation:</label>
+                <input type="text" id="Occupation" name="Occupation" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="Location">
+            </div>
+            <div class="form-group">
+                <label for="Interested Area:">Interested Area::</label>
+                <input type="text" id="Interested Area" name="Interested Area:">
+            </div>
+            
+            <div class="form-group">
+                <label for="Bio">Bio:</label>
+                <textarea id="bio" name="Bio"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="NumberofTasks">Number of Tasks Posted:</label>
+                <input type="text" id="NumberofTasks" name="Number of Tasks Posted">
+            </div>
+            <div class="form-group">
+                <label for="SuccessRate">Success Rate:</label>
+                <input type="text" id="SuccessRate" name="Success Rate">
+            </div>
+            <div class="form-group">
+                <label for="recruiterType">Recruiter Type:</label>
+                <select id="recruiterType" name="Recruiter Type">
+                    <option value="Individual">Individual</option>
+                    <option value="Small Business">Small Business</option>
+                    <option value="Company">Company</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile:</label>
+                <input type="url" id="linkedin" name="LinkedIn Profile:">
+            </div>
+            <div class="form-group">
+                <label for="website">Personal Website:</label>
+                <input type="url" id="website" name="Personal Website:">
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <textarea id="experience" name="Experience"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="Skills"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="certifications">Certifications:</label>
+                <textarea id="certifications" name="Certifications"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="achievements">Achievements:</label>
+                <textarea id="achievements" name="Achievements"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="portfolio">Portfolio:</label>
+                <input type="file" id="portfolio" name="Portfolio:" accept=".pdf">
+            </div>
+            <div class="form-group">
+                <label for="cv">CV (PDF):</label>
+                <input type="file" id="cv" name="cv" accept=".pdf">
+            </div>
+            <div class="form-group">
+                <label for="passportPicture">Passport Size Picture:</label>
+                <input type="file" id="passportPicture" name="Passport Size Picture:" accept="image/*">
+            </div>
+            <input type="hidden" id="userType" name="userType" value="recruiter">
+            <button type="submit">Save Profile</button>
+            <button type="button" id="editProfile">Edit Profile</button>
+        </form>
+        <div id="profileDisplay" style="display: none;">
+            <h2><center>Your Profile</center></h2>
+            <div id="displayProfileDetails"></div>
+            <img id="displayLogo" src="" alt="Company Logo" style="max-width: 200px; display: none;">
+        </div>
+    </div>
+    <script src="profile_jobRecruiter.js"></script>
+    <script src="navbar.js"></script>
+    
+</body>
+</html>

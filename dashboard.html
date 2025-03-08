@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <nav>
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <span class="hamburger-icon">☰</span>
+        </button>
+        <h1><b>Next Youth</b></h1>
+        <div class="search-form">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">
+                <img src="search-icon.png" alt="Search" class="search-icon-img">
+            </button>
+        </div>
+        <ul class="nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="notification.html">Notification</a></li>
+            <li><a href="AboutUs.html">?</a></li>
+            <li><button id="darkModeToggle"><b>Dark Mode</b></button></li>
+        </ul>
+    </nav>
+    <div class="hidden-menu" id="hiddenMenu">
+        <div class="menu-logo">
+            <img src="logo.svg" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="myProfile.html">My profile</a></li>
+            <li><a href="#" id="profileLink">Create my profile</a>
+                <ul id="profileSubmenu" style="display: none;">
+                    <li><a href="profile_jobApplicant.html">Job Applicant</a></li>
+                    <li><a href="profile_jobRecruiter.html">Job Recruiter</a></li>
+                </ul>
+            </li>
+            <li><a href="postJob.html">Post a Task</a></li>
+            <li><a href="my-tasks.html">My Tasks</a></li>
+            <li><a href="bidding-requests.html">Bidding Requests</a></li>
+            <li><a href="my-bids.html">My Bids</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="admin.html">Admin Panel</a></li>
+        </ul>
+    </div>
+    <div class="dashboard-container">
+        <h1 id="welcomeMessage">Welcome to dashboard, </h1>
+        <p class="dashboard-tagline">Increase opportunities, unlock potential!</p>
+    </div>
+    
+    <script src="dashboard.js"></script>
+    <script src="darkmode.js"></script>
+    <script src="navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileLink = document.getElementById('profileLink');
+            const profileSubmenu = document.getElementById('profileSubmenu');
+
+            profileLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                profileSubmenu.style.display = profileSubmenu.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Youth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="darkmode.css">
+    
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="logo.svg" alt="Logo" class="logo">
+        </div>
+        <h2>Sign in</h2>
+        <form onsubmit="return validateLogin()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="remember-forgot">
+                <ul>
+                    <li>Remember me</li>
+                </ul>
+                <a href="#" id="forgotPassword">Forgot password?</a>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p class="create-new">Create new?</p>
+        <button id="darkModeToggle">Dark Mode</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+</html>

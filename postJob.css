@@ -1,0 +1,127 @@
+/* postJob.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e0f2f7, #f0f8ff);
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    margin-top: 72px;
+}
+
+#jobPostingForm .section:nth-child(1) h2{
+    font-size: 32px;
+}
+
+#jobPostingForm {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Change background to white */
+    padding: 30px;
+    border-radius: 12px; /* Adjust border radius */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);/* Adjust box shadow */
+    width: 600px;
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+#jobPostingForm h2 {
+    color: #333;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 30px; /* Adjust margin bottom */
+    font-size: 24px; /* Adjust font size */
+    font-weight: 600; /* Adjust font weight */
+}
+
+#jobPostingForm .section {
+    margin-bottom: 25px; /* Adjust margin between sections */
+}
+
+#jobPostingForm label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555; /* Adjust label color */
+    font-weight: 500; /* Adjust font weight */
+}
+
+#jobPostingForm input[type="text"],
+#jobPostingForm textarea,
+#jobPostingForm select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#jobPostingForm input[type="text"]:focus,
+#jobPostingForm textarea:focus,
+#jobPostingForm select:focus {
+    border-color: #a0c4ff;
+    outline: none;
+}
+
+#jobPostingForm textarea {
+    resize: vertical;
+}
+
+#jobPostingForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+#jobPostingForm button:hover {
+    background-color: #45a049;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background: rgb(67, 65, 65);
+}
+
+body.dark-mode #jobPostingForm {
+    background: rgb(238, 236, 236);
+}
+
+body.dark-mode #jobPostingForm h2 {
+    color: black;
+}
+
+/* Remove section specific styling */
+#jobPostingForm .section:nth-child(1) {
+    text-align: left;
+    padding: 0;
+    margin: 0 0 25px 0;
+    max-width: 100%;
+}
+
+#jobPostingForm .section:nth-child(1) h2 {
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+#jobPostingForm .section:nth-child(1) label {
+    text-align: left;
+    display: block;
+}
+
+#jobPostingForm .section:nth-child(1) input[type="text"],
+#jobPostingForm .section:nth-child(1) textarea {
+    text-align: left;
+}

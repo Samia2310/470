@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Marketplace - Bangladesh</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="darkmode.css">
+</head>
+
+<body>
+    <nav>
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <span class="hamburger-icon">☰</span>
+        </button>
+        <h1><b>Next Youth</b></h1>
+        <div class="search-form">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">
+                <img src="search-icon.png" alt="Search" class="search-icon-img">
+            </button>
+        </div>
+        <ul class="nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="notification.html">Notification</a></li>
+            <li><a href="AboutUs.html">?</a></li>
+            <li><button id="darkModeToggle"><b>Dark Mode</b></button></li>
+        </ul>
+    </nav>
+    <div class="hidden-menu" id="hiddenMenu">
+        <div class="menu-logo">
+            <img src="logo.svg" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="myProfile.html">My profile</a></li>
+            <li><a href="#" id="profileLink">Create my profile</a>
+                <ul id="profileSubmenu" style="display: none;">
+                    <li><a href="profile_jobApplicant.html">Job Applicant</a></li>
+                    <li><a href="profile_jobRecruiter.html">Job Recruiter</a></li>
+                </ul>
+            </li>
+            <li><a href="post-task.html">Post a Task</a></li>
+            <li><a href="my-tasks.html">My Tasks</a></li>
+            <li><a href="bidding-requests.html">Bidding Requests</a></li>
+            <li><a href="my-bids.html">My Bids</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="admin.html">Admin Panel</a></li>
+        </ul>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Find Tasks. Earn Money. Build Experience.</h2>
+            <p>A platform for Bangladeshi students to earn by completing small tasks for individuals & businesses.</p>
+            <div class="cta-buttons">
+                <button class="find-tasks">Find Tasks</button>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.png" alt="Students working remotely">
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <i class="fas fa-briefcase"></i>
+                    <p>Recruiters post tasks with budget & deadline.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-search"></i>
+                    <p>Students browse tasks & place bids.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-handshake"></i>
+                    <p>Recruiters select a student & payment is secured.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Students complete the task & get paid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="task-categories">
+        <div class="container">
+            <h2>Popular Task Categories</h2>
+            <div class="categories">
+                <div class="category">
+                    <i class="fas fa-pen"></i>
+                    <h3>Writing & Editing</h3>
+                </div>
+                <div class="category">
+                    <i class="fas fa-palette"></i>
+                    <h3>Graphic Design</h3>
+                </div>
+                <div class="category">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                </div>
+                <div class="category">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Tutoring & Assignments</h3>
+                </div>
+                <div class="category">
+                    <i class="fas fa-camera"></i>
+                    <h3>Photography & Video Editing</h3>
+                </div>
+            </div>
+            <button class="explore-all">Explore All Tasks</button>
+        </div>
+    </section>
+
+    <section class="featured-tasks">
+        <div class="container">
+            <h2>Featured & Latest Tasks</h2>
+            <div class="tasks">
+                <div class="task">
+                    <h3>Design a logo for a startup</h3>
+                    <p>Budget: 1000 BDT</p>
+                    <p>Deadline: 2024-03-10</p>
+                    <button class="quick-apply">Quick Apply</button>
+                </div>
+                <div class="task">
+                    <h3>Help with CSE assignment</h3>
+                    <p>Budget: 500 BDT</p>
+                    <p>Deadline: 2024-03-05</p>
+                    <button class="quick-apply">Quick Apply</button>
+                </div>
+                <div class="task">
+                    <h3>Create a simple website</h3>
+                    <p>Budget: 3000 BDT</p>
+                    <p>Deadline: 2024-03-15</p>
+                    <button class="quick-apply">Quick Apply</button>
+                </div>
+            </div>
+            <button class="view-all">View All Tasks</button>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <img src="student-testimonial.jpg" alt="Student Testimonial">
+                    <p>"This platform helped me earn while studying! Highly recommended!"</p>
+                    <p class="author">- Student User</p>
+                </div>
+                <div class="testimonial">
+                    <img src="recruiter-testimonial.jpg" alt="Recruiter Testimonial">
+                    <p>"I got my assignments done on time, hassle-free!"</p>
+                    <p class="author">- Task Poster</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Join Thousands of Students & Start Earning Today!</h2>
+            <div class="cta-buttons">
+                <button class="sign-up">Sign Up as a Student</button>
+                <button class="post-task">Post a Task Now</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Social Media</h3>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: support@taskmarketplace.com</p>
+                    <p>Phone: +880 1234567890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+    <script src="navbar.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

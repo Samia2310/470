@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cddadb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Container for the login form */
+.login-container {
+    background-color: #bdd1d2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 330px;
+    height: 600px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Logo container */
+.logo-container {
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 480px;
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    margin-top: 25px;
+}
+
+/* Header */
+h2 {
+    color: #0B2E33;
+    top: 10px;
+    margin: -10px auto 40px;
+    font-weight: bolder;
+    font-size: 30px;
+    
+}
+
+/* Input and button styles */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    text-align: left;
+    margin: -5px auto 20px;
+}
+
+/* Login button */
+button {
+    background-color: #0B2E33;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 80%;
+    margin: 0 auto 25px; /* Adjust margin-bottom to -10px */
+    display: block;
+    font-weight: bold;
+    margin-top: -25px;
+}
+
+button:hover {
+    background-color: #197967;
+}
+
+/* Styles for "Remember me" and "Forgot password" */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 9px auto 60px;
+    bottom : 10px;
+    margin-top: -10px;
+    
+}
+
+.remember-forgot ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+.remember-forgot ul li {
+    font-size: 12px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.remember-forgot ul li:last-child {
+    margin-left: 5px; /* Add space between checkbox and text */
+}
+
+#forgotPassword {
+    text-decoration: none;
+    color: #0B2E33;
+    font-size: 10px;
+}
+
+.create-new {
+    font-size: 13px;
+    text-align: center;
+    margin-top: -18px; /* Add some space between the button and the text */
+}
+
+
+
+#darkModeToggle {
+    position: fixed;
+    color: #000000;
+    right: 20px; /* Increased right margin for better spacing */
+    margin-bottom: -20px; /* Added bottom margin for better spacing */
+    padding: 8px 12px;
+    background-color: #eee;
+    border: 2px solid #0a0a0a; /* Reduced border width for cleaner look */
+    border-radius: 20px;
+    cursor: pointer;
+    width: auto;
+    white-space: nowrap;
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Optional: Add hover effect for better user feedback */
+#darkModeToggle:hover {
+    background-color: #ddd;
+}
+
+/* Optional: Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    #darkModeToggle {
+        right: 10px; /* Adjust right margin on smaller screens */
+        bottom: 10px; /* Adjust bottom margin on smaller screens */
+    }
+}
+
+/* darkmode.css */
+
+body.dark-mode .login-container {
+    background-color: lightgrey; /* Light grey background */
+    color: #333; /* Dark text color for other elements */
+}
+
+
+body.dark-mode .login-container input{
+    background-color: white;
+    color: black;;
+    border: 1px solid #777;
+}
+
+body.dark-mode .login-container button{
+    background-color: #555;
+
+}
+
+body.dark-mode .login-container a {
+  color: lightblue;
+}
+
+body.dark-mode .login-container input::placeholder {
+    color: black; /* White placeholder text */
+  }
+
+/* Ensure the logo remains unaffected */
+body.dark-mode .logo-container img {
+    filter: none;
+}
